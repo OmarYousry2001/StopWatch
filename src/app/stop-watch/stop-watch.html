@@ -1,0 +1,18 @@
+<div class="Stopwatch-container">
+    <h2>Stop Watch</h2>
+
+    <!-- 
+  This element displays the elapsed time in seconds.
+  The value is divided by 1000 to convert from milliseconds to seconds.
+  The Angular number pipe is used to format the number:
+    - number:'1.1-1' means:
+      * Minimum 1 digit before the decimal point
+      * Exactly 1 digit after the decimal point (e.g., 2.3, 12.7)
+-->
+    <p class="Time">{{elapsedTime | number:"1.1-1"}} Seconds</p>
+    <div class="controls">
+        <button (click)="startStop()">{{isRunning ? "Stop" :"Start"}}</button>
+        <button (click)="reset()">reset</button>
+
+    </div>
+</div>
